@@ -12,6 +12,7 @@ class Complex{
         Complex(double, double);
         void set(double, double);
         void out();
+        void operator=(Complex);
 };
 
 #endif

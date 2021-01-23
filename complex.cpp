@@ -24,3 +24,9 @@ void Complex::out()
 {
     std::cout << "(" << this->real << ", " << this->imag << ")" << std::endl;
 }
+
+void Complex::operator=(Complex a)
+{
+    this->real = a.real;
+    this->imag = a.imag;
+}
