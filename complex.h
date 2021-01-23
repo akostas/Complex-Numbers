@@ -14,6 +14,8 @@ class Complex{
         void out();
         void operator=(Complex);
         Complex operator+(Complex);
+        Complex operator-(Complex);
+		
 };
 
 #endif
