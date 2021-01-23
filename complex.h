@@ -6,7 +6,6 @@
 class Complex{
     private:
         double real, imag; // Real and imaginary part
-    
     public:
         Complex();
         Complex(double, double);
@@ -18,7 +17,8 @@ class Complex{
         Complex operator*(Complex);
         Complex operator*(double);
         Complex operator*(int);
-		Complex operator/(Complex);
+        Complex operator/(Complex);
+        Complex operator^(double);
 };
 
 #endif
