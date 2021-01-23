@@ -65,6 +65,12 @@ Complex Complex::operator*(int a)
 	return gin;	
 }
 
-
+Complex Complex::operator/(Complex a)
+{
+    Complex gin;
+    gin.real = (this->real*a.real + this->imag*a.imag) / (a.real*a.real + a.imag*a.imag);
+    gin.imag = (this->imag*a.real - this->real*a.imag) / (a.real*a.real + a.imag*a.imag);
+    return gin;
+}
 
 

@@ -18,7 +18,7 @@ class Complex{
         Complex operator*(Complex);
         Complex operator*(double);
         Complex operator*(int);
-		
+		Complex operator/(Complex);
 };
 
 #endif
