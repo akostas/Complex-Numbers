@@ -30,3 +30,8 @@ void Complex::operator=(Complex a)
     this->real = a.real;
     this->imag = a.imag;
 }
+
+Complex Complex::operator+(Complex a)
+{
+	return Complex(this->real + a.real, this->imag + a.imag);
+}
