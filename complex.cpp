@@ -40,3 +40,31 @@ Complex Complex::operator-(Complex a)
 {	
     return Complex(this->real - a.real, this->imag - a.imag);
 }
+
+Complex Complex::operator*(Complex a)
+{
+	Complex gin;
+    gin.real = this->real*a.real - this->imag*a.imag;
+    gin.imag = this->real*a.imag + this->imag*a.real;
+	return gin;	
+}
+
+Complex Complex::operator*(double a)
+{
+	Complex gin;
+    gin.real = this->real*a;
+    gin.imag = this->imag*a;
+	return gin;	
+}
+
+Complex Complex::operator*(int a)
+{
+	Complex gin;
+    gin.real = this->real*a;
+    gin.imag = this->imag*a;
+	return gin;	
+}
+
+
+
+

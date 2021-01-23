@@ -15,6 +15,9 @@ class Complex{
         void operator=(Complex);
         Complex operator+(Complex);
         Complex operator-(Complex);
+        Complex operator*(Complex);
+        Complex operator*(double);
+        Complex operator*(int);
 		
 };
 
