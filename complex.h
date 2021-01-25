@@ -7,6 +7,7 @@ class Complex{
     private:
         double real, imag; // Real and imaginary part
         bool type; // Define type of coordinates
+        
 
     public:
         Complex();
@@ -21,6 +22,8 @@ class Complex{
         Complex operator*(int);
         Complex operator/(Complex);
         Complex operator^(double);
+        Complex convert2polar();
+        Complex convert2carte();
 };
 
 #endif

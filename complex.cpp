@@ -27,6 +27,32 @@ void Complex::out()
     else   std::cout << "(" << this->real << " <" << this->imag << ")" << std::endl;
 }
 
+Complex Complex::convert2polar()
+{
+    double pi = 3.14159265;
+    Complex b;
+    b.type = 1;
+    double r, tmptheta;
+    r = sqrt(this->real*this->real + this->imag*this->imag);
+    tmptheta = atan(this->imag/this->real);
+    b.real = r;
+    if( r*cos(tmptheta) > 0 )  b.imag = tmptheta*180/pi;
+    else    b.imag = tmptheta*180/pi + pi;
+    return b;
+}
+
+
+Complex Complex::convert2carte()
+{
+    double pi = 3.14159265;
+    Complex b;
+    b.type = 0;
+    b.real = this->real * cos(this->imag*pi/180.);
+    b.imag = this->real * sin(this->imag*pi/180.);
+    return b;
+}
+
+
 void Complex::operator=(Complex a)
 {
     this->real = a.real;
