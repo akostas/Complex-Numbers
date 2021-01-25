@@ -4,25 +4,27 @@
 
 Complex::Complex()
 {
-    this->real=0;
-    this->imag=0;
+    this->real=0; this->imag=0;
+    this->type=0;
 }
 
-Complex::Complex(double numR, double numI)
+Complex::Complex(double numR, double numI, bool t)
 {
     this->real=numR;
     this->imag=numI;
 }
 
-void Complex::set(double numR, double numI)
+void Complex::set(double numR, double numI, bool t)
 {
     this->real=numR;
     this->imag=numI;
+    this->type=t;
 }
 
 void Complex::out()
-{
-    std::cout << "(" << this->real << ", " << this->imag << ")" << std::endl;
+{  
+    if( this->type == 0 )   std::cout << "(" << this->real << ", " << this->imag << ")" << std::endl;
+    else   std::cout << "(" << this->real << " <" << this->imag << ")" << std::endl;
 }
 
 void Complex::operator=(Complex a)

@@ -6,10 +6,12 @@
 class Complex{
     private:
         double real, imag; // Real and imaginary part
+        bool type; // Define type of coordinates
+
     public:
         Complex();
-        Complex(double, double);
-        void set(double, double);
+        Complex(double, double, bool t=0);
+        void set(double, double, bool t=0);
         void out();
         void operator=(Complex);
         Complex operator+(Complex);
